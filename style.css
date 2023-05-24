@@ -5,6 +5,9 @@
     font-family: "Poppins", sans-serif;
 }
 /* Inicio de navbar */
+html{
+  scroll-behavior: smooth;
+}
 .nav-bar {
     background-color: #E6F1F1;
     text-align: right;
@@ -91,10 +94,17 @@ strong{
 
 /* inicio de (card-acerca-de)*/
 .card-acerca-de {
-    margin: 80px auto;
+    margin: 250px auto;
     display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     flex-direction: column;
+    animation-name: slideIn2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    margin-bottom: 190px;
   }
   
   .cards {
@@ -146,6 +156,132 @@ strong{
   }
   
 /* fin de (card-acerca-de)*/
+
+ 
+
+
+
+/* inicio de (integrantes-equipo) */
+.integrantes-equipo {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.integrantes-equipo .titulo-equipo {
+  width: 100%;
+  text-align: center;
+}
+
+.cards-equipo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.integrante-card {
+  position: relative;
+  width: 35%;
+  height: 300px;
+  padding: 10px;
+  background-color: #E6F1F1;
+  border-radius: 10px;
+  padding-bottom: 27px;
+  transition: 0.3s all;
+  margin-bottom: 30px;
+
+}
+.integrantes-equipo .titulo-equipo{
+  margin-bottom: 90px;
+}
+.integrante-card:hover {
+  transition: 0.3s all;
+  box-shadow: 0px 0px 10px 4px #becdcd;
+}
+
+
+.integrante-card .nombre{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.integrante-card .email{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #1EA8D3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.back-color2{
+  background-color: #afd31e;
+
+}
+.back-color3{
+  background-color: #d31e1e;
+}
+.back-color4{
+  background-color: #301ed3;
+}
+.back-color5{
+  background-color: #1ed3a6;
+}
+
+
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top:0;
+  margin-top: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.habilidades{
+  
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  flex-direction: row;
+  font-size: 14px;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+  font-weight: bolder;
+  flex-wrap: wrap;
+  
+  color: rgb(0, 0, 0)
+
+
+}
+
+.habilidades .habilidad{
+  background-color: #51b2cf;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 
 
 
@@ -261,17 +397,55 @@ strong{
     .nav-bar.responsive .menu-icon.open {
       transition: background-color 0.3s ease;
     }
-
-
-
-
-
-
     .card-contenedor {
       font-size: 16px;
       width: 90%;
       height: auto;
     }
+
+
+    .cards-equipo {
+      width: 100%;
+      gap: 10px;
+    }
+    
+    .integrante-card {
+      width: 70%;
+      height: 300px;
+      font-size: 8px;
+      margin-bottom: 30px;
+      padding-bottom: 50px;
+    }
+
+    img{
+      width: 70px;
+      height: 70px;
+      margin-top: 90px;
+    }
+    
+
+    .integrante-card .nombre{
+      font-size: 15px;
+      margin-top: 50px;
+    
+    }
+    
+    .integrante-card .email{
+      font-size: 10px;
+      
+    }
+
+    .habilidades{
+      font-size: 7px;
+      width: 100%;
+      gap: 3px;
+    }
+    
+    .card-acerca-de{
+      margin-top: 290px;
+      margin-bottom: 290px;
+    }
+   
   }
   
 
@@ -286,3 +460,17 @@ strong{
       transform: translateY(0%);
     }
   }
+
+  @keyframes slideIn2 {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+
+  

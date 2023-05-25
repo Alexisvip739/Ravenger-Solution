@@ -94,9 +94,8 @@ strong{
 
 /* inicio de (card-acerca-de)*/
 .card-acerca-de {
-    margin: 250px auto;
+    margin: 70px auto;
     display: flex;
-    height: 80vh;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -117,13 +116,13 @@ strong{
   .card-contenedor {
     font-size: 20px;
     width: 33%;
-    text-align: center;
+    text-align: justify;
     background-color: #E6F1F1;
     border-radius: 10px;
     transition: 0.3s;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     cursor: pointer;
-    padding: 10px;
+    padding:10px;
   }
   .card-contenedor:hover {
     transition: 0.3s;
@@ -135,7 +134,7 @@ strong{
     -moz-columns: 3;
     list-style-type: none;
     line-height: 20px;
-    text-align: start;
+    text-align: justify;
     width: 90%;
     display: flex;
 
@@ -168,8 +167,9 @@ strong{
 /* inicio de (integrantes-equipo) */
 .integrantes-equipo {
   width: 95%;
-  margin: auto;
+  margin: 90px auto;
   display: flex;
+  gap: 0;
   flex-direction: column;
 }
 
@@ -182,7 +182,7 @@ strong{
   width: 90%;
   margin: auto;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
 
@@ -307,30 +307,34 @@ img {
 }
 
 /*inicio servicios*/
-.servicios,.contenedor-cliente{
+
+.servicios{
   width: 90%;
   display: flex;
-  gap: 110px;
-  flex-wrap: wrap;
+  gap: 50px;
   flex-direction: column;
-  margin: 150px auto;
+  margin: 10px auto;
+  
 }
-.servicios h1,.contenedor-cliente h1{
+.servicios h1{
+  width: 100%;
   text-align: center;
 }
-.servicios .card-servicios, .contenedor-cliente .cards-clientes {
+.servicios .card-servicios {
   display: flex;
   flex-wrap: wrap; /* Implementación de flex-wrap */
   gap: 30px;
+  width: 100%;
   justify-content: center;
+  flex-direction: row;
 }
 
-.card-servicios .card,
-.cards-clientes .card {
-  width: 25%;
+.card-servicios .card {
+  width: 40%;
   display: flex;
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
+  text-align: justify;
   border-radius: 10px;
   flex-direction: column;
   background-color: #E6F1F1;
@@ -349,6 +353,36 @@ img {
 
 
 /*inicio Clientes*/
+  .contenedor-cliente{
+    width: 90%;
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    margin: 70px auto;
+  }
+  .contenedor-cliente h1{
+    width: 100%;
+    text-align: center;
+  }
+  .contenedor-cliente .cards-clientes{
+    display: flex;
+    flex-wrap: wrap; /* Implementación de flex-wrap */
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .cards-clientes .card {
+    width: 30%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #E6F1F1;
+    transition: 0.3s all;
+  }
 /*fin clientes  */
 /*inicio footer*/
 footer {
@@ -600,6 +634,13 @@ form button{
     }
     .cards-clientes .card p{
       font-size: 8px;
+    }
+
+    .cards-clientes .card h1{
+      font-size: 15px;
+    }
+    .cards-clientes .card p{
+      font-size: 12px;
     }
 
   }

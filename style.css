@@ -66,9 +66,8 @@ strong{
 
 }
 .home-contenedor    h1{
-    animation-name: slideIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation: rebote 1s infinite;
+    animation-duration: 3s;
 }
 .btn-sobre-nosotros{
     padding: 10px;
@@ -148,6 +147,8 @@ strong{
   .card-contenedor li {
     font-size: 18px;
     margin-bottom: 10px;
+    list-style-type: circle;
+
     flex-basis: 33.33%;
   }
   .Descripcion-card {
@@ -629,7 +630,38 @@ form button{
       display: flex;
       flex-wrap: wrap;
     }
+
+    .cards-clientes .card {
+      width: 100%;
+    }
+
+
+    .card-servicios .card {
+      width: 100%;
+    }
+
+
+    .card-contenedor ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style-type: circle;
+      line-height: 30px;
+      text-align: justify;
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+  }
+  
+  .card-contenedor ul li {
+      columns: 2;
+      margin: auto;
+      width: 45%; /* Ajusta el ancho de los elementos para dejar espacio entre ellos */
+  }
     
+     
     .cards-clientes .card h1{
       font-size: 13px;
     }
@@ -682,5 +714,13 @@ form button{
     }
   }
 
+  @keyframes rebote {
+    0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
 
   

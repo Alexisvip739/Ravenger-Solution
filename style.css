@@ -116,11 +116,12 @@ strong{
   
   .card-contenedor {
     font-size: 20px;
-    width: 40%;
+    width: 33%;
     text-align: center;
     background-color: #E6F1F1;
     border-radius: 10px;
     transition: 0.3s;
+    margin-bottom: 30px;
     cursor: pointer;
     padding: 10px;
   }
@@ -128,22 +129,25 @@ strong{
     transition: 0.3s;
     box-shadow: 0px 0px 10px 4px #bad3d3;
   }
-
-  
-
   .card-contenedor ul {
     columns: 3;
     -webkit-columns: 3;
     -moz-columns: 3;
     list-style-type: none;
+    line-height: 20px;
     text-align: start;
     width: 90%;
     display: flex;
+
     flex-wrap: wrap;
     margin-left: auto; 
 }
-  
+  .Descripcion-card{
+    font-size: 18px;
+    line-height: 30px;
+  }
   .card-contenedor li {
+    font-size: 18px;
     margin-bottom: 10px;
     flex-basis: 33.33%;
   }
@@ -282,9 +286,110 @@ img {
   border-radius: 10px;
 }
 
+/*inicio servicios*/
+.servicios,.contenedor-cliente{
+  width: 90%;
+  display: flex;
+  gap: 110px;
+  flex-direction: column;
+  margin: 150px auto;
+}
+.servicios h1,.contenedor-cliente h1{
+  text-align: center;
+}
+.servicios .card-servicios,.contenedor-cliente .cards-clientes{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card-servicios .card, .cards-clientes .card{
+  width: 25%;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: #E6F1F1;
+  transition: 0.3s all;
+
+}
+
+.card:hover{
+  transition: 0.3s all;
+  box-shadow: 0px 0px 10px 4px #becdcd;
+}
+.card h3{
+  text-align: center;
+}
+
+/*fin servicios*/
 
 
+/*inicio Clientes*/
+/*fin clientes  */
+/*inicio footer*/
+footer {
+ display: flex;
+ flex-direction: column;
+ background-color: #E6F1F1;
+}
 
+form{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 70%;
+  margin: 40px auto;
+  
+}
+form input,textarea{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+form h4{
+  text-align: center;
+}
+form button{
+  background-color: #1EA8D3;
+  width: 120px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 4px #51b2cf86;
+  cursor: pointer;
+}
+
+.contact-info{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  
+
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info,
+  form {
+    width: 100%;
+  }
+  .contact-info{
+    font-size: 10px;
+  }
+}
+
+/*fin footer*/
 /*Parte responsiva de la web*/
 @media screen and (max-width: 768px) {
     .menu-icon {
@@ -446,6 +551,18 @@ img {
       margin-bottom: 290px;
     }
    
+  }
+
+  @media screen and (max-width: 600px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-info,
+    form {
+      width: 100%;
+    }
   }
   
 

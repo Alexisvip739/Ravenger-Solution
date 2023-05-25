@@ -198,10 +198,30 @@ strong{
   padding-bottom: 27px;
   transition: 0.3s all;
   margin-bottom: 30px;
+  overflow: scroll;
 
 }
+
+/* Estilos de la barra de desplazamiento */
+.integrante-card::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.integrante-card::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+}
+
+.integrante-card::-webkit-scrollbar-thumb {
+  background: #888; /* Color del "pulgar" de la barra de desplazamiento */
+  border-radius: 4px; /* Radio de esquina del "pulgar" */
+}
+
+.integrante-card::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del "pulgar" al pasar el cursor por encima */
+}
+
 .integrantes-equipo .titulo-equipo{
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 }
 .integrante-card:hover {
   transition: 0.3s all;
@@ -374,6 +394,20 @@ form button{
   
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
   footer {
     flex-direction: column;
@@ -505,7 +539,7 @@ form button{
     .card-contenedor {
       font-size: 16px;
       width: 90%;
-      height: auto;
+     
     }
 
 
@@ -517,9 +551,12 @@ form button{
     .integrante-card {
       width: 70%;
       height: 300px;
-      font-size: 8px;
+      font-size: 4px;
+      text-overflow: ellipsis;
+      flex-wrap: wrap;
       margin-bottom: 30px;
       padding-bottom: 50px;
+
     }
 
     img{
@@ -543,6 +580,9 @@ form button{
     .habilidades{
       font-size: 7px;
       width: 100%;
+      height: 70px;
+      display: flex;
+      
       gap: 3px;
     }
     

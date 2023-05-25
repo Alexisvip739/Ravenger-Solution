@@ -311,22 +311,22 @@ img {
   width: 90%;
   display: flex;
   gap: 110px;
+  flex-wrap: wrap;
   flex-direction: column;
   margin: 150px auto;
 }
 .servicios h1,.contenedor-cliente h1{
   text-align: center;
 }
-.servicios .card-servicios,.contenedor-cliente .cards-clientes{
+.servicios .card-servicios, .contenedor-cliente .cards-clientes {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 100%;
+  flex-wrap: wrap; /* Implementación de flex-wrap */
   gap: 30px;
   justify-content: center;
 }
 
-.card-servicios .card, .cards-clientes .card{
+.card-servicios .card,
+.cards-clientes .card {
   width: 25%;
   display: flex;
   gap: 20px;
@@ -335,7 +335,6 @@ img {
   flex-direction: column;
   background-color: #E6F1F1;
   transition: 0.3s all;
-
 }
 
 .card:hover{
@@ -590,7 +589,19 @@ form button{
       margin-top: 290px;
       margin-bottom: 290px;
     }
-   
+    .cards-clientes{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .cards-clientes .card h1{
+      font-size: 13px;
+    }
+    .cards-clientes .card p{
+      font-size: 8px;
+    }
+
   }
 
   @media screen and (max-width: 600px) {

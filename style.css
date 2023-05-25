@@ -379,6 +379,7 @@ img {
     gap: 20px;
     padding: 20px;
     border-radius: 10px;
+    text-align: justify;
     flex-direction: column;
     background-color: #E6F1F1;
     transition: 0.3s all;
